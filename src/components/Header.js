@@ -1,26 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.css'
-import React, { useState, Component } from 'react'
-import { Redirect } from 'react-router-dom'
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-} from 'reactstrap'
+import React, { Component } from 'react'
 import { HicetnuncContext } from '../context/HicetnuncContext'
 import { Card, Col, Row } from 'reactstrap'
-import { keyframes } from 'styled-components'
-import '../App.css'
 
-const axios = require('axios')
-
-export default class AppNavbar extends Component {
-  constructor(props) {
-    super(props)
-  }
+export default class Header extends Component {
   static contextType = HicetnuncContext
 
   componentWillMount = () => {
@@ -28,18 +11,6 @@ export default class AppNavbar extends Component {
   }
 
   render() {
-    let drop = {
-      fontSize: '25px',
-      marginTop: '150%',
-      marginRight: '35px',
-      textAlign: 'right',
-    }
-
-    var grow = keyframes`
-        from { transform: scale(0.225); }
-        to { transform: scale(1); }
-    `
-
     let left = {
       height: '30px',
       width: '30px',
@@ -94,6 +65,7 @@ export default class AppNavbar extends Component {
       },
       textDecoration: 'none',
     }
+
     return (
       <div style={{ position: 'fixed', top: 0, width: '100%', zIndex: 100 }}>
         <Row>
@@ -120,6 +92,7 @@ export default class AppNavbar extends Component {
                   <img
                     style={left}
                     src={require('../media/menu-black-18dp.svg')}
+                    alt=""
                   />
                 </a>
               </div>
@@ -130,10 +103,3 @@ export default class AppNavbar extends Component {
     )
   }
 }
-/*
-<div>
-<Navbar color="faded" light>
-    <NavbarBrand href="/" className="mr-auto" id="font">hicetnunc</NavbarBrand>
-    <NavbarToggler style={{ border: "none" }} onClick={this.toogle} className="mr-2" />
-</Navbar>
-</div>   */

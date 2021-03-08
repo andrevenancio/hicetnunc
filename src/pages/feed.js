@@ -257,24 +257,5 @@ export default class Feed extends Component {
         </Row>
       </div>
     )
-
-    /*         let subList = {
-                    listStyle: "none",
-                    fontSize: "26px"
-                }
-        
-                return (
-                    <div>
-                        {
-                            this.state.loading ? <div style={{ marginTop: '35vh', verticalAlign: 'middle' }}>
-                                <Row>
-                                    <Col sm="12" md={{ position: 'fixed', size: 6, offset: 3 }}>
-                                        <span>03.01.2021 OBJKT Swap</span>
-                                    </Col>
-                                </Row>
-                                <Loading style={{ position: 'absolute' }} /></div> : null
-                        }
-                    </div>
-                ) */
   }
 }

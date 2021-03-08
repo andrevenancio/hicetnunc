@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import HicetnuncContextProvider from './context/HicetnuncContext'
 import Sync from './pages/sync'
 import About from './pages/about'
@@ -8,27 +8,25 @@ import Feed from './pages/feed'
 import Mint from './pages/mint'
 import ObjktDisplay from './pages/objkt-display'
 import Loading from './pages/loading'
-import AppNavbar from './components/AppNavbar'
-import Disclaimer from './components/Disclaimer'
+import Header from './components/Header'
+import Footer from './components/Footer'
 import './App.css'
 
 function App() {
   return (
     <HicetnuncContextProvider>
-      <AppNavbar />
-      <Router>
-        <Switch>
-          <Route exact path="/" component={Feed} />
-          <Route exact path="/tz/:id" component={Display} />
-          <Route exact path="/feed" component={Feed} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/sync" component={Sync} />
-          <Route exact path="/mint" component={Mint} />
-          <Route exact path="/objkt/:id" component={ObjktDisplay} />
-          <Route exact path="/load" component={Loading} />
-        </Switch>
-      </Router>
-      <Disclaimer />
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Feed} />
+        <Route path="/tz/:id" component={Display} />
+        <Route path="/feed" component={Feed} />
+        <Route path="/about" component={About} />
+        <Route path="/sync" component={Sync} />
+        <Route path="/mint" component={Mint} />
+        <Route path="/objkt/:id" component={ObjktDisplay} />
+        <Route path="/load" component={Loading} />
+      </Switch>
+      <Footer />
     </HicetnuncContextProvider>
   )
 }
