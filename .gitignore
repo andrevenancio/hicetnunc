@@ -2,6 +2,15 @@
 
 # dependencies
 /node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
 
 # IDEs
 .vscode
@@ -9,7 +18,9 @@
 # production
 /build
 /amplify
+
 # misc
+.DS_Store
 .env_prod
 
 npm-debug.log*
@@ -23,7 +34,7 @@ yarn-error.log*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
 
-#amplify
+# amplify
 amplify/\#current-cloud-backend
 amplify/.config/local-*
 amplify/mock-data
@@ -44,6 +55,11 @@ templates/html-image-scale/package-lock.json
 templates/html-image-scale/node_modules
 templates/html-image-scale/dist
 templates/html-image-scale/.parcel-cache
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # contributor specific (local) folders
 .andre

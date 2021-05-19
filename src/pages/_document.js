@@ -7,7 +7,7 @@ class MyDocument extends Document {
   }
 
   render() {
-    const setInitialTheme = `function getTheme(){var e=window.localStorage.getItem("--versum-theme");if("system"!==e)return e}var theme=getTheme();theme&&(document.body.dataset.theme=theme);`
+    const setInitialTheme = `function getTheme(){var e=window.localStorage.getItem("--hic-theme");if("system"!==e)return e}var theme=getTheme();theme&&(document.body.dataset.theme=theme);`
 
     return (
       <Html lang="en">
